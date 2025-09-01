@@ -357,6 +357,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .specialties {
@@ -405,9 +406,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .image-placeholder img {
-    width: 18rem;
-    height: 20rem;
-    border-radius: 2rem;
+    width: 23rem;
+    height: 31rem;
+    border-radius: 1rem;
 }
 
 /* Lawyer Profile Section */
@@ -424,8 +425,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profile-image .image-placeholder {
-    width: 250px;
-    height: 300px;
+    width: 350px;
+    height: 500px;
 }
 
 .profile-text h2 {
@@ -443,6 +444,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .qualifications h3 {
@@ -793,160 +795,162 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
-/* Responsive Design */
+/* Correção para o modo mobile */
 @media (max-width: 1024px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .about-content,
-    .profile-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .about-content,
+  .profile-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-    }
-    
-    .cta-btn {
-        display: none;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.25rem;
-    }
-    
-    .hero-actions {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .about-content,
-    .profile-content {
-        text-align: center;
-    }
-    
-    .image-placeholder {
-        width: 250px !important;
-        height: 250px !important;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .cta-btn {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .about-content,
+  .profile-content {
+    text-align: center;
+  }
+
+  /* Removida a regra de tamanho fixo para .image-placeholder */
+  /* E adicionado uma regra para a imagem interna ficar responsiva */
+  .image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 1rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.125rem;
-    }
-    
-    .section-title {
-        font-size: 1.75rem;
-    }
-    
-    .service-card,
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-    
-    .hero-actions .btn {
-        width: 100%;
-        justify-content: center;
-    }
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .service-card,
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content > * {
-    animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .hero-title {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .hero-subtitle {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .hero-description {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .hero-actions {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 /* Scroll Animations */
 @media (prefers-reduced-motion: no-preference) {
-    .service-card,
-    .testimonial-card {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 0.6s ease-out forwards;
-    }
-    
-    .service-card:nth-child(1) { animation-delay: 0.1s; }
-    .service-card:nth-child(2) { animation-delay: 0.2s; }
-    .service-card:nth-child(3) { animation-delay: 0.3s; }
-    
-    .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-    .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+  .service-card,
+  .testimonial-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .service-card:nth-child(1) { animation-delay: 0.1s; }
+  .service-card:nth-child(2) { animation-delay: 0.2s; }
+  .service-card:nth-child(3) { animation-delay: 0.3s; }
+  
+  .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+  .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
 }
-
