@@ -267,6 +267,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Hero Section */
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    /* Adiciona a mesma fonte para ambos os elementos */
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Adiciona a mesma fonte para ambos os elementos */
+    font-family: 'Poppins', sans-serif;
+}
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -317,29 +337,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: var(--gray-600);
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-}
-
-.hero-description {
-    font-size: 1.125rem;
-    color: var(--gray-600);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .hero-actions {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 /* About Section */
 .about {
     padding: var(--section-padding);
