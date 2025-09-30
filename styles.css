@@ -274,6 +274,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     /* Adiciona a mesma fonte para ambos os elementos */
     font-family: 'Poppins', sans-serif;
+    /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
+    transform: translateY(-80px); 
+    /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 
 .hero-description {
@@ -285,6 +288,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
     /* Adiciona a mesma fonte para ambos os elementos */
     font-family: 'Poppins', sans-serif;
+    /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
+    transform: translateY(-80px); 
+    /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 
 .hero {
@@ -314,13 +320,22 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
 }
 
+/* DEPOIS */
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding-top: 5rem;
+    
+    /* --- ALTERAÇÃO AQUI --- */
+    position: absolute; /* Torna a posição absoluta em relação ao .hero */
+    top: 53%; /* Move o container todo para 35% do topo (ajuste este valor) */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente no ponto 35% */
+    /* --- FIM DA ALTERAÇÃO --- */
+    
+    padding-top: 0; /* Remove o padding-top desnecessário */
 }
 
 .hero-title {
@@ -331,6 +346,9 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* --- INÍCIO DA ALTERAÇÃO PRINCIPAL PARA SUBIR O TÍTULO --- */
+    transform: translateY(-80px); 
+    /* --- FIM DA ALTERAÇÃO PRINCIPAL PARA SUBIR O TÍTULO --- */
 }
 
 .highlight {
@@ -342,6 +360,9 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
+    transform: translateY(-80px); 
+    /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 /* About Section */
 .about {
@@ -800,160 +821,172 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Correção para o modo mobile */
 @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .about-content,
-  .profile-content,
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+    .hero-title {
+        font-size: 3rem;
+        transform: translateY(-40px); /* Ajuste menor para telas menores */
+    }
+    
+    .hero-subtitle,
+    .hero-description,
+    .hero-actions {
+        transform: translateY(-40px); /* Ajuste menor para telas menores */
+    }
+
+    .about-content,
+    .profile-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-  
-  .mobile-menu-btn {
-    display: flex;
-  }
-  
-  .cta-btn {
-    display: none;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .about-content,
-  .profile-content {
-    text-align: center;
-  }
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .cta-btn {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        transform: translateY(-20px); /* Ajuste para mobile */
+    }
 
-  /* Removida a regra de tamanho fixo para .image-placeholder */
-  /* E adicionado uma regra para a imagem interna ficar responsiva */
-  .image-placeholder img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
+    .hero-subtitle,
+    .hero-description,
+    .hero-actions {
+        transform: translateY(-20px); /* Ajuste para mobile */
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .about-content,
+    .profile-content {
+        text-align: center;
+    }
+
+    .image-placeholder img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 1rem;
-  }
-  
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.125rem;
-  }
-  
-  .section-title {
-    font-size: 1.75rem;
-  }
-  
-  .service-card,
-  .testimonial-card {
-    padding: 1.5rem;
-  }
-  
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .service-card,
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content > * {
-  animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .hero-title {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 
 .hero-subtitle {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .hero-description {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .hero-actions {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 /* Scroll Animations */
 @media (prefers-reduced-motion: no-preference) {
-  .service-card,
-  .testimonial-card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-  
-  .service-card:nth-child(1) { animation-delay: 0.1s; }
-  .service-card:nth-child(2) { animation-delay: 0.2s; }
-  .service-card:nth-child(3) { animation-delay: 0.3s; }
-  
-  .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-  .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card,
+    .testimonial-card {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    
+    .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+    .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
 }
