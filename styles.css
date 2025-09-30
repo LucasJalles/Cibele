@@ -275,8 +275,6 @@ h1, h2, h3, h4, h5, h6 {
     /* Adiciona a mesma fonte para ambos os elementos */
     font-family: 'Poppins', sans-serif;
     /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
-    transform: translateY(-75px); 
-    /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 
 .hero-description {
@@ -289,8 +287,6 @@ h1, h2, h3, h4, h5, h6 {
     /* Adiciona a mesma fonte para ambos os elementos */
     font-family: 'Poppins', sans-serif;
     /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
-    transform: translateY(-75px); 
-    /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 
 .hero {
@@ -347,8 +343,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     /* --- INÍCIO DA ALTERAÇÃO PRINCIPAL PARA SUBIR O TÍTULO --- */
-    transform: translateY(-80px); 
-    /* --- FIM DA ALTERAÇÃO PRINCIPAL PARA SUBIR O TÍTULO --- */
 }
 
 .highlight {
@@ -361,8 +355,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     flex-wrap: wrap;
     /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
-    transform: translateY(-80px); 
-    /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
+
 }
 /* About Section */
 .about {
@@ -823,14 +816,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 3rem;
-        transform: translateY(-40px); /* Ajuste menor para telas menores */
     }
     
-    .hero-subtitle,
-    .hero-description,
-    .hero-actions {
-        transform: translateY(-40px); /* Ajuste menor para telas menores */
-    }
 
     .about-content,
     .profile-content,
@@ -860,17 +847,19 @@ h1, h2, h3, h4, h5, h6 {
     .cta-btn {
         display: none;
     }
+
+    .logo img {
+        width: 4rem; /* Reduz para 4rem em telas menores */
+        height: auto; 
+    }
+    .brand-text h1 {
+        font-size: 1.1rem; /* Opcional: Ajustar tamanho da fonte do nome */
+    }
     
     .hero-title {
         font-size: 2.5rem;
-        transform: translateY(-20px); /* Ajuste para mobile */
     }
 
-    .hero-subtitle,
-    .hero-description,
-    .hero-actions {
-        transform: translateY(-20px); /* Ajuste para mobile */
-    }
     
     .hero-subtitle {
         font-size: 1.25rem;
@@ -915,6 +904,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
+
+    /* Garante que o card de serviço não force a largura */
+    .services-grid {
+        /* Garante que seja 1 coluna, sem largura mínima forçada */
+        grid-template-columns: 1fr; 
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
     .container {
         padding: 0 1rem;
     }
