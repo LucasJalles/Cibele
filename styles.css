@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Adiciona a mesma fonte para ambos os elementos */
     font-family: 'Poppins', sans-serif;
     /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
-    transform: translateY(-80px); 
+    transform: translateY(-75px); 
     /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 
@@ -289,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Adiciona a mesma fonte para ambos os elementos */
     font-family: 'Poppins', sans-serif;
     /* --- INÍCIO DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
-    transform: translateY(-80px); 
+    transform: translateY(-75px); 
     /* --- FIM DA ALTERAÇÃO PARA SUBIR O CONTEÚDO --- */
 }
 
@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
     
     /* --- ALTERAÇÃO AQUI --- */
     position: absolute; /* Torna a posição absoluta em relação ao .hero */
-    top: 55%; /* Move o container todo para 35% do topo (ajuste este valor) */
+    top: 58%; /* Move o container todo para 35% do topo (ajuste este valor) */
     left: 50%;
     transform: translate(-50%, -50%); /* Centraliza perfeitamente no ponto 35% */
     /* --- FIM DA ALTERAÇÃO --- */
