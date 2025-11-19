@@ -236,36 +236,39 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header elegant-header">
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="index.html" class="nav-brand modern-brand">
-          <div class="brand-logo">
-            <img src="imagens/logo.png" alt="Logo CS Monteiro">
-          </div>
-          <div class="brand-info">
-            <h1>CS Monteiro Advocacia</h1>
-            <p>Assessoria & Consultoria Jurídica</p>
-          </div>
-        </a>
-
-        <ul class="nav-menu modern-menu">
-          <li><a href="index.html" class="nav-link">Início</a></li>
-          <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
-          <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="galeria.html" class="nav-link active">Galeria</a></li>
-          <li><a href="index.html#contato" class="nav-link">Contato</a></li>
-        </ul>
-
-        <a href="#contato" class="cta-btn highlight-btn">
-          <i class="fab fa-whatsapp"></i> Fale Agora
-        </a>
-
-        <button class="mobile-menu-btn" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
+  <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <img src="imagens/logo.png" alt="">
+                    </div>
+                    <div class="brand-text">
+                        <h1> CS Monteiro Advocacia</h1>
+                        <p>Assessoria & Consultoria Jurídica</p>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Início</a></li>
+                    <li><a href="index.html" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html" class="nav-link">Serviços</a></li>
+                    <li><a href="galeria.html" class="nav-link">Galeria</a></li>
+                    <li><a href="index.html" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <a href="#contato" class="cta-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale Agora
+                </a>
+            </div>
+        </nav>
   </header>
 
   <!-- GALERIA -->
@@ -277,21 +280,41 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="gallery-card" data-caption="Equipe em reunião">
-          <img src="imagens/galeria/04.23.22_Hernandez-Law-Group-Headshots-Group-Shots_H-4372.jpg" alt="Equipe em reunião">
-          <div class="caption">Equipe em reunião</div>
+        <div class="gallery-card" data-caption="Decoração">
+          <img src="imagens/galeria/Decoração estatua.jpg" alt="Decoração">
+          <div class="caption">Decoração</div>
         </div>
-        <div class="gallery-card" data-caption="Recepção do Escritório">
-          <img src="imagens/galeria/interior-design-office-space-studio-course1-1366x768.webp" alt="Recepção do Escritório">
+        <div class="gallery-card" data-caption="Decoração sala">
+          <img src="imagens/galeria/Sala atendimento.jpg" alt="Recepção do Escritório">
           <div class="caption">Recepção do Escritório</div>
         </div>
-        <div class="gallery-card" data-caption="Dra. Cibele Monteiro em evento jurídico">
+        <div class="gallery-card" data-caption="Dra. Cibele Monteiro">
           <img src="imagens/Cibelly.jpg" alt="Dra. Cibele Monteiro">
-          <div class="caption">Evento Jurídico</div>
+          <div class="caption">Dra. Cibele Monteiro</div>
         </div>
-        <div class="gallery-card" data-caption="Equipe durante workshop interno">
-          <img src="imagens/galeria/Bianchi-Brandt-Law-Firm-Team-Portrait-square-scaled.jpg" alt="Workshop">
-          <div class="caption">Workshop Interno</div>
+        <div class="gallery-card" data-caption="Lançamento de Livro">
+          <img src="imagens/galeria/Lançamento de livro.jpg" alt="Lançamento de Livro">
+          <div class="caption">Lançamento de Livro</div>
+        </div>
+        <div class="gallery-card" data-caption="Recebimento de Diploma">
+          <img src="imagens/galeria/Curso.png" alt="Recebimento de Diploma">
+          <div class="caption">Finalização de Curso</div>
+        </div>
+        <div class="gallery-card" data-caption="Sala Atendimento">
+          <img src="imagens/galeria/Decoração sala.jpg" alt="Sala Atendimento">
+          <div class="caption">Sala Atendimento</div>
+        </div>
+        <div class="gallery-card" data-caption="UERJ">
+          <img src="imagens/galeria/UERJ.jpg" alt="UERJ">
+          <div class="caption">UERJ</div>
+        </div>
+        <div class="gallery-card" data-caption="Cantinho do Café">
+          <img src="imagens/galeria/cantinho do Café.jpg" alt="Cantinho do Café">
+          <div class="caption">Cantinho do Café</div>
+        </div>
+        <div class="gallery-card" data-caption="Evento">
+          <img src="imagens/galeria/Evento.jpg" alt="Evento">
+          <div class="caption">Evento</div>
         </div>
       </div>
     </div>
@@ -322,6 +345,7 @@
     closeBtn.onclick = () => modal.style.display = 'none';
     modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
   </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
