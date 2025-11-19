@@ -458,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profile-description p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1.125rem;
     line-height: 1.7;
     text-align: justify;
